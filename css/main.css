@@ -1,0 +1,166 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #8dcbe2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.map{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.map_image, .town-a{
+    width: 59%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.town-a {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 10px;
+    color: #494949;
+}
+
+.town-a > header > p {
+    width: 49%;
+    height: auto;
+    margin: 0;
+}
+
+.town-a img {
+    width: 100%;
+    height: auto;
+}
+
+.town-a h2 {
+    width: 49%;
+    vertical-align: middle;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    color: #8dcbe2;
+}
+
+.town-a h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.bangor.town-a h2, .locmaria.town-a h2 {
+    line-height: 293px;
+}
+
+.sauzon.town-a h2, .le-palais.town-a h2 {
+    line-height: 336px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.map_image path {
+    fill: #f0eee4;
+    stroke: white;
+    stroke-width: 5px;
+    transition: fill 0.3s;
+}
+
+.town path{
+   fill: #71bd63; 
+}
+
+.map_list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 39%;
+    margin: 0 auto;
+}
+
+.map_list > ul, .map_list > ul > li > a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.map_list > ul > li > a {
+    padding: 15px;
+    margin: 15px;
+    width: 100%;
+    pointer-events: none;
+}
+
+.map_list > ul > li{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    background-color: #81bad0;
+    cursor: pointer;
+}
+
+.map_list > ul > li:hover {
+    background-color: dodgerblue;
+}
+
+.map_list > ul > li.is-active {
+    background-color: dodgerblue;
+}
+.map_list > ul > li.active {
+    background-color: dodgerblue;
+}
+
+.map_image .is-active path:not(.road) {
+    background-color: dodgerblue;
+    fill: rgba(30, 144, 255, 0.73);
+}
+
+#road path {
+    fill: transparent;
+    pointer-events: none;
+}
+
+path.road {
+    fill: white; 
+}
+
+hr {
+    background-color: #e4e4e4;
+    height: 2px;
+    border: none;
+    margin: 10px 0;
+}
+
+article p {
+    text-align: left;
+    text-transform: none;
+    font-weight: 400;
+}
+
+#Map a {
+    cursor: pointer;
+}
+
+.ignore:not(.active) {
+    pointer-events: none;
+}
+
+.dontshow {
+    display: none;
+}
